@@ -31,7 +31,7 @@ class SiteControler{
         con.query(sql, (err,results) => {
             console.log(results)
             if(err) throw err;
-            if(results[0].password==password){
+            if(results[0].Password==password){
                 console.log("Dang nhap thanh cong")
                 res.redirect('/')
             }else console.log('Dang nhap that bai')
@@ -42,7 +42,7 @@ class SiteControler{
     }
     postForgot(req,res){
         var email= req.body.email
-        var sql = `SELECT * FROM users WHERE email= '${email}'`
+        var sql = `SELECT * FROM customers WHERE email= '${email}'`
         
         con.query(sql, (err,results) => {          
             if(err) throw err;

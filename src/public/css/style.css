@@ -210,7 +210,7 @@ h2 {
   text-align: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 20px; }
+  margin-left: 90px; }
 
 .img-item {
   height: 350px;
@@ -225,7 +225,9 @@ h2 {
 .img-footer {
   width: 100%;
   margin: 10px 70px;
-  font-size: 14px; }
+  font-size: 14px; 
+  text-align: left;
+}
 
 .img-face {
   width: 2%; }
@@ -233,7 +235,9 @@ h2 {
 .text-footer {
   font-size: 14px;
   font-style: italic;
-  margin: 10px 70px; }
+  margin: 10px 70px; 
+  text-align: left;
+}
 
 .a-footer {
   margin-right: 100px; }
@@ -398,7 +402,7 @@ h5 {
 
 .input-login {
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 85px;
   width: 400px;
   border-radius: 10px; }
 
