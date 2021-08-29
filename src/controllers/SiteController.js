@@ -27,7 +27,7 @@ class SiteControler{
     postLogin(req,res){
         var email= req.body.email
         var password = req.body.password
-        var sql = `SELECT * FROM users WHERE email= '${email}'`
+        var sql = `SELECT * FROM customers WHERE Email= '${email}'`
         con.query(sql, (err,results) => {
             console.log(results)
             if(err) throw err;
@@ -42,7 +42,7 @@ class SiteControler{
     }
     postForgot(req,res){
         var email= req.body.email
-        var sql = `SELECT * FROM customers WHERE email= '${email}'`
+        var sql = `SELECT * FROM customers WHERE Email= '${email}'`
         
         con.query(sql, (err,results) => {          
             if(err) throw err;
@@ -51,7 +51,7 @@ class SiteControler{
                     from: 'testdoan124@gmail.com',
                     to: email,
                     subject: 'Quên mật khẩu',
-                    text: `Mật khẩu của bạn là: ${results[0].password}`
+                    text: `Mật khẩu của bạn là: ${results[0].Password}`
                 }
                 transporter.sendMail(mainOptions, function(err, info){
                     if (err) {
