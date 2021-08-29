@@ -1,20 +1,35 @@
-<div class="body-login">
-    <div class="logo-login">
-        <a href="index.html"><img src="img/logo.png"></a>
-    </div>
-    <form method="POST" action="/login">
-        <div class="login-frame">
-            <input name="email" class="form-control input-login" type="text" placeholder="Email" aria-label="default input example">
-            <div class="col-sm-10">
-                <input name="password" type="password" class="form-control input-login" placeholder="Mật khẩu" id="inputPassword">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="body-login">
+        <div class="logo-login">
+            <a href="/"><img src="img/logo.png"></a>
+        </div>
+        {{#if mes}}
+            <div class="alert alert-danger">{{mes}}</div>
+        {{/if}}
+        <form method="POST" action="/login">
+            <div class="login-frame">
+                <input name="email" class="form-control input-login" type="text" placeholder="Email" aria-label="default input example"{{#if values}} value={{values.email}} {{/if}}>
+                <div class="col-sm-10">
+                    <input name="password" type="password" class="form-control input-login" placeholder="Mật khẩu" id="inputPassword">
+                </div>
+                <button type="submit" class="btn btn-secondary btn-login">
+                    ĐĂNG NHẬP
+                </button>
+        </form>
+        <div class="link-login">
+            <a href="/forgot">Quên mật khẩu?</a>
+            <div><a href="dangky.html">Chưa có tài khoản? Hãy đăng ký ngay!</a></div>
             </div>
-            <button type="submit" class="btn btn-secondary btn-login">
-                ĐĂNG NHẬP
-            </button>
-    </form>
-    <div class="link-login">
-        <a href="/forgot">Quên mật khẩu?</a>
-        <div><a href="dangky.html">Chưa có tài khoản? Hãy đăng ký ngay!</a></div>
         </div>
     </div>
-</div>
+</body>
