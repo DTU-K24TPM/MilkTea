@@ -16,7 +16,7 @@
         {{#if mes}}
             <div class="alert alert-danger">{{mes}}</div>
         {{/if}}
-        <form method="POST" action="/login">
+        <form class="form-login" method="POST" action="/login">
             <div class="login-frame">
                 <input name="email" class="form-control input-login" type="text" placeholder="Email" aria-label="default input example"{{#if values}} value={{values.email}} {{/if}}>
                 <div class="col-sm-10">

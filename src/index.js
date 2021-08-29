@@ -4,7 +4,6 @@ var app = express();
 
 var handlebars = require('express-handlebars')
 var port = 3000
-
 var route = require('./routes/index')
 
 app.use(express.static(path.join(__dirname, 'public')))
@@ -19,6 +18,7 @@ app.set('views', path.join(__dirname,'resources','views'))
 
 //Route init
 route(app)
+
 
 
 

@@ -14,9 +14,9 @@
             <a href="/"><img src="img/logo.png"></a>
         </div>
         {{#if mes}}
-            <div class="alert alert-danger">{{mes}}</div>
+            <div class="alert alert-danger succes-alert">{{mes}}</div>
         {{/if}}
-        <form method="POST" action="/forgot">
+        <form class="form-login" method="POST" action="/forgot">
             <div class="login-frame">
                 <input name="email" class="form-control input-login" type="text" placeholder="Email" aria-label="default input example"{{#if values}} value={{values.email}} {{/if}}>
                 <button type="submit" class="btn btn-secondary btn-login">
@@ -24,7 +24,7 @@
                 </button>
         </form>
         <div class="link-login">
-            <a href="/forgot">Đăng ký</a><div class="nav-cach"></div><a href="/login">Đăng nhập</a>
+            <a href="/login">Đăng nhập</a>
         </div>
     </div>    
 </body>
