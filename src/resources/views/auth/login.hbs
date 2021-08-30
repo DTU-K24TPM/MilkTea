@@ -13,11 +13,12 @@
         <div class="logo-login">
             <a href="/"><img src="../img/logo.png"></a>
         </div>
-        {{#if mes}}
-            <div class="alert alert-danger">{{mes}}</div>
-        {{/if}}
+        
         <form class="form-login" method="POST" action="/auth/login">
             <div class="login-frame">
+                {{#if mes}}
+                    <div class="alert alert-danger">{{mes}}</div>
+                {{/if}}
                 <input name="email" class="form-control input-login" type="text" placeholder="Email" aria-label="default input example"{{#if values}} value={{values.email}} {{/if}}>
                 <div class="col-sm-10">
                     <input name="password" type="password" class="form-control input-login" placeholder="Mật khẩu" id="inputPassword">
@@ -28,7 +29,7 @@
         </form>
         <div class="link-login">
             <a href="/auth/forgot">Quên mật khẩu?</a>
-            <div><a href="dangky.html">Chưa có tài khoản? Hãy đăng ký ngay!</a></div>
+            <div><a href="/auth/register">Chưa có tài khoản? Hãy đăng ký ngay!</a></div>
             </div>
         </div>
     </div>
