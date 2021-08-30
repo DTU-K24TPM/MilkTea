@@ -4,7 +4,7 @@ var app = express();
 
 var handlebars = require('express-handlebars')
 var port = 3000
-var route = require('./routes/index')
+var route = require('./routes/index.route')
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
