@@ -19,6 +19,7 @@ class AuthControler{
     
     //[GET] /login
     login(req,res){
+
         res.render('auth/login', {
             layout: null
           })
@@ -31,7 +32,8 @@ class AuthControler{
         con.query(sql, (err,results) => {
             if(results.length===1){
             if(err) throw err;
-            if(results[0].Password==password){                
+            if(results[0].Password==password){    
+                res.cookie('Id',results[0].Id)           
                 res.redirect('/')
             }else{
                 res.render('auth/login',{
@@ -89,6 +91,38 @@ class AuthControler{
             }
         })
         
+    }
+    register(req,res){
+        res.render('auth/register', {
+            layout: null
+          })
+    }
+    postRegister(req,res){
+        var email= req.body.email
+        var password= req.body.password
+        var fullname= req.body.fullname
+        var gender = parseInt(req.body.gender)
+        var birthday = req.body.birthday
+        var sql = `SELECT * FROM customers WHERE Email= '${email}'`
+        con.query(sql, (err,results) => {          
+            if(err) throw err;
+            if(results.length===1){                
+                res.render('auth/register',{
+                    mes: 'Tài khoản đã tồn tại',
+                    layout: null,
+                    values: req.body
+                });
+            }else{
+                var sql = `INSERT INTO customers (Password,Fullname,Email,Gender,Birthday) VALUES ('${password}','${fullname}','${email}',${gender},'${birthday}')`
+                con.query(sql, (err,results) => {
+                    if(err) console.log(err)                    
+                    res.render('auth/register',{
+                        mes: 'Đăng ký thành công.',
+                        layout: null                        
+                    });                                        
+                }) 
+            }
+        })        
     }
 }
 

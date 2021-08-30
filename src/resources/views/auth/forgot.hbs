@@ -13,11 +13,12 @@
         <div class="logo-login">
             <a href="/"><img src="../img/logo.png"></a>
         </div>
-        {{#if mes}}
-            <div class="alert alert-danger succes-alert">{{mes}}</div>
-        {{/if}}
+        
         <form class="form-login" method="POST" action="/auth/forgot">
             <div class="login-frame">
+                {{#if mes}}
+                    <div class="alert alert-danger succes-alert">{{mes}}</div>
+                {{/if}}
                 <input name="email" class="form-control input-login" type="text" placeholder="Email" aria-label="default input example"{{#if values}} value={{values.email}} {{/if}}>
                 <button type="submit" class="btn btn-secondary btn-login">
                     GỬI
