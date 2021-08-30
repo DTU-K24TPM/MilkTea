@@ -1,61 +1,70 @@
-
 <div class="wrapper">
-        <div class="body-slide">
-            <div class="dropdown">
-                <button class="nut_dropdown"><img class="img-drop" src="img/drop.png" />DANH MỤC SẢN PHẨM</button>
-                <div class="noidung_dropdown">
-                    <a href="#">Trà sữa</a>
-                    <a href="#">Trà trái cây</a>
-                    <a href="#">Sữa tươi</a>
-                    <a href="#">Cà phê</a>
-                    <a href="#">Đá xay</a>
-                    <a href="#">Ăn vặt</a>
-                </div>
+    <div class="body-slide">
+        <div class="dropdown">
+            <button class="nut_dropdown"><img class="img-drop" src="img/drop.png" />DANH MỤC SẢN PHẨM</button>
+            <div class="noidung_dropdown">
+                <a href="#">Trà sữa</a>
+                <a href="#">Trà trái cây</a>
+                <a href="#">Sữa tươi</a>
+                <a href="#">Cà phê</a>
+                <a href="#">Đá xay</a>
+                <a href="#">Ăn vặt</a>
             </div>
+        </div>
 
-            <div class="w3-content w3-section slide-show">
-                <img class="mySlides" src="img/anh1.jpg">
-                <img class="mySlides" src="img/anh2.jpg">
-                <img class="mySlides" src="img/anh3.jpg">
-                <img class="mySlides" src="img/anh4.jpg">
-                <img class="mySlides" src="img/anh5.jpg">
-                <img class="mySlides" src="img/anh6.jpg">
-                <img class="mySlides" src="img/anh7.jpg">
+        <div class="w3-content w3-section slide-show">
+            <img class="mySlides" src="img/anh1.jpg">
+            <img class="mySlides" src="img/anh2.jpg">
+            <img class="mySlides" src="img/anh3.jpg">
+            <img class="mySlides" src="img/anh4.jpg">
+            <img class="mySlides" src="img/anh5.jpg">
+            <img class="mySlides" src="img/anh6.jpg">
+            <img class="mySlides" src="img/anh7.jpg">
+        </div>
+    </div>
+</div>
+<br>
+
+<section class="home-menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="wrapper">
+                    <div class="list-menu">
+                        <div class="menu-title">
+                            <h2>MENU</h2>
+                            <div class="span-line"></div>
+                        </div>
+                        <br />
+                        <ul class="list-menu-ul">
+                            <li class="li-center"><a href="#" class="list-menu-a">ALL</a></li>
+                            <li><a href="#" class="list-menu-a">TRÀ SỮA</a></li>
+                            <li><a href="#" class="list-menu-a">TRÀ TRÁI CÂY</a></li>
+                            <li class="li-center"><a href="#" class="list-menu-a">SỮA TƯƠI</a></li>
+                            <li class="li-center"><a href="#" class="list-menu-a">CÀ PHÊ</a></li>
+                            <li class="li-center"><a href="#" class="list-menu-a">ĐÁ XAY</a></li>
+                            <li class="li-center"><a href="#" class="list-menu-a">ĂN VẶT</a></li>
+                        </ul>
+                        <div class="list-item">
+                            {{#each products}}
+                            <div class="col-lg-3 col-md-4 col-sm-12 list-item-div">
+                                <a href="#"><img src="/img/{{this.Image}}" class="img-item">
+                                    <h5><a href="#">{{this.Name}}</a> </h5>
+                                    <h6><a href="#">{{this.UnitPrice}} VNĐ</a></h6>
+                                </a>
+                            </div>
+                            {{/each}}
+                        </div>
+
+
+
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
-    <div class="wrapper">
-        <div class="list-menu">
-            <div class="menu-title">
-            <h2>MENU</h2>
-            <div class="span-line"></div>
-        </div>
-            <br />
-            <ul class="list-menu-ul">
-                <li class="li-center"><a href="#" class="list-menu-a">ALL</a></li>
-                <li><a href="#" class="list-menu-a">TRÀ SỮA</a></li>
-                <li><a href="#" class="list-menu-a">TRÀ TRÁI CÂY</a></li>
-                <li class="li-center"><a href="#" class="list-menu-a">SỮA TƯƠI</a></li>
-                <li class="li-center"><a href="#" class="list-menu-a">CÀ PHÊ</a></li>
-                <li class="li-center"><a href="#" class="list-menu-a">ĐÁ XAY</a></li>
-                <li class="li-center"><a href="#" class="list-menu-a">ĂN VẶT</a></li>
-            </ul>
-            
-            <div class="list-item">
-                {{#each products}}
-                <div class="list-item-div">
-                    <a href="#"><img src="img/{{this.Image}}" class="img-item">
-                        <h5>{{this.Name}} </h5>
 
-                        <h6>{{this.UnitPrice}} VNĐ</h6>
-                    </a>
-                </div>
-                  {{/each}}
-            </div>
-          
-        </div>
-    </div>
+</section>
 </body>
 <script src="js/index.js"></script>
-
-

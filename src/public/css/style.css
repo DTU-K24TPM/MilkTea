@@ -161,7 +161,7 @@ a:hover {
 
 .mySlides {
   display: none;
-  width: 100%; }
+  width: 90%; }
 
 .img-face {
   width: 100%; }
@@ -209,16 +209,18 @@ h2 {
   text-align: center !important; }
 
 .list-item {
-  display: flex;
+    display: flex;
     text-align: center;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;}
-
+    justify-content: center;
+  }
 .img-item {
-  height: 350px;
-  padding: 10px 30px;
-  margin: 10px; }
+  height: 300px;
+ }
+ .img-item:hover{
+  border: 2px solid #dd2424;
+ }
 
 .span-footer {
   background: #333;
