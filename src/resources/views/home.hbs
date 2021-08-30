@@ -40,67 +40,18 @@
                 <li class="li-center"><a href="#" class="list-menu-a">ĐÁ XAY</a></li>
                 <li class="li-center"><a href="#" class="list-menu-a">ĂN VẶT</a></li>
             </ul>
-
+            
             <div class="list-item">
+                {{#each products}}
                 <div class="list-item-div">
-                    <a href="#"><img src="img/img1.jpg" class="img-item">
-                        <h5>Trà sữa đặc biệt</h5>
-                        <h6>Giá: 23.000đ</h6>
+                    <a href="#"><img src="img/{{this.Image}}" class="img-item">
+                        <h5>{{this.Name}} </h5>
+                        <h6>{{this.UnitPrice}}</h6>
                     </a>
                 </div>
-                <div class="list-item-div">
-                    <a href="#"><img src="img/img2.jpg" class="img-item">
-                        <h5>Thái xanh đặc biệt</h5>
-                        <h6>Giá: 23.000đ</h6>
-                    </a>
-                </div>
-                <div class="list-item-div">
-                    <a href="#"><img src="img/img3.jpg" class="img-item">
-                        <h5>Khoai môn đặc biệt</h5>
-                        <h6>Giá: 29.000đ</h6>
-                    </a>
-                </div>
-
-
-                <div class="list-item-div">
-                    <a href="#"><img src="img/img4.jpg" class="img-item">
-                        <h5>Trà sữa Bông</h5>
-                        <h6>Giá: 29.000đ</h6>
-                    </a>
-                </div>
-                <div class="list-item-div">
-                    <a href="#"><img src="img/img5.jpg" class="img-item">
-                        <h5>Trà xoài nha đam</h5>
-                        <h6>Giá: 22.000đ</h6>
-                    </a>
-                </div>
-                <div class="list-item-div">
-                    <a href="#"><img src="img/img6.jpg" class="img-item">
-                        <h5>Việt quất nha đam</h5>
-                        <h6>Giá: 22.000đ</h6>
-                    </a>
-                </div>
-
-
-                <div class="list-item-div">
-                    <a href="#"><img src="img/img7.jpg" class="img-item">
-                        <h5>Trà ổi hồng nha đam</h5>
-                        <h6>Giá: 23.000đ</h6>
-                    </a>
-                </div>
-                <div class="list-item-div">
-                    <a href="#"><img src="img/img8.jpg" class="img-item">
-                        <h5>Trà kiwi nha đam</h5>
-                        <h6>Giá: 22.000đ</h6>
-                    </a>
-                </div>
-                <div class="list-item-div">
-                    <a href="#"><img src="img/img9.jpg" class="img-item">
-                        <h5>Trà dâu nha đam</h5>
-                        <h6>Giá: 29.000đ</h6>
-                    </a>
-                </div>
+                  {{/each}}
             </div>
+          
         </div>
     </div>
 </body>
