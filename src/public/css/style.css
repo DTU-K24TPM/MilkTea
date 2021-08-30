@@ -449,3 +449,41 @@ h5 {
   justify-content: center;
     display: flex;
 }
+.profile-menu-user {
+  list-style: none;
+    float: right;
+    margin-right: 10px;
+    width: 200px;
+} 
+.profile-menu-list{
+  position: absolute;
+  right: 20px;
+}
+.submenu{
+  position: absolute;
+    list-style: none;
+    padding: 5px;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 10%);
+    margin-top: 28px;
+    background: #fff;
+    display: none;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+.submenu a{
+  padding: 5px 10px;
+  display: block;
+}
+.submenu a:hover{
+  background: indianred;
+  color: #fff;
+}
+
+.profile-menu-user:hover .submenu {
+  display: block; }
+
+.btn-hello{
+  background: rgba(248 249 250);
+  border: 1px solid rgba(248 249 250);
+}
