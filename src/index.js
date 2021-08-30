@@ -1,5 +1,6 @@
 var path = require('path')
 var express = require('express');
+var cookieParser= require('cookie-parser')
 var app = express();
 
 var handlebars = require('express-handlebars')
@@ -8,11 +9,13 @@ var route = require('./routes/index.route')
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
+app.use(cookieParser())
 app.use(express.json())
-
 app.engine('hbs',handlebars({
   extname: '.hbs'
 }))
+
+
 app.set('view engine','hbs')
 app.set('views', path.join(__dirname,'resources','views'))
 

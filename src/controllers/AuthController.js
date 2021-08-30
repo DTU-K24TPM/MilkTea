@@ -19,6 +19,7 @@ class AuthControler{
     
     //[GET] /login
     login(req,res){
+
         res.render('auth/login', {
             layout: null
           })
@@ -31,7 +32,8 @@ class AuthControler{
         con.query(sql, (err,results) => {
             if(results.length===1){
             if(err) throw err;
-            if(results[0].Password==password){                
+            if(results[0].Password==password){    
+                res.cookie('Id',results[0].Id)           
                 res.redirect('/')
             }else{
                 res.render('auth/login',{
