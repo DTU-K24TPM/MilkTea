@@ -24,6 +24,8 @@ class AuthControler{
             layout: null
           })
     }
+
+    
     //[POST] /login
     postLogin(req,res){
         var email= req.body.email
@@ -123,6 +125,10 @@ class AuthControler{
                 }) 
             }
         })        
+    }
+    logout(req,res){
+        res.clearCookie('Id')
+        res.redirect('/')
     }
 }
 

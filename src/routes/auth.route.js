@@ -9,4 +9,5 @@ router.get('/forgot',AuthController.forgot)
 router.post('/forgot',AuthController.postForgot)
 router.get('/register',AuthController.register)
 router.post('/register',AuthController.postRegister)
+router.get('/logout',AuthController.logout)
 module.exports = router
