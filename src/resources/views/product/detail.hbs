@@ -16,20 +16,15 @@
                     </tr>
 
                     <tr>
+                        {{#each size}}
                         <td>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                                     value="option1" checked>
-                                <label class="form-check-label" for="inlineRadio1">Size M</label>
+                                <label class="form-check-label" for="inlineRadio1">{{this.Name}}({{this.UnitPrice}}đ)</label>
                             </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Size L</label>
-                            </div>
-                        </td>
+                        </td>                     
+                        {{/each}}
                     </tr>
 
                     <tr>
@@ -61,75 +56,14 @@
                         </th>
                     </tr>
                     <tr>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
-                                    checked>
-                                <label class="form-check-label" for="inlineCheckbox1">Thạch nhà làm</label>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Pudding</label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Rau câu phô mai</label>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Trân châu trắng</label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Popping</label>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Trân châu đường đen</label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Nha đam</label>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Milk foam</label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Bánh plan</label>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Khúc bạch</label>
-                            </div>
-                        </td>
+                        {{#each topping}}
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"                                        >
+                                    <label class="form-check-label" for="inlineCheckbox1">{{this.Name}}({{this.UnitPrice}}đ)</label>
+                                </div>
+                            </td>    
+                        {{/each}}                    
                     </tr>
                 </thead>
             </table>
