@@ -1,5 +1,5 @@
 var express = require('express')
-var middleware = require('../controllers/login.middleware')
+var middleware = require('../middlewares/login.middleware')
 var router = express.Router()
 
 var CartController = require('../controllers/CartController')

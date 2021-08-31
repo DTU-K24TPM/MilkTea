@@ -2,7 +2,7 @@ var siteRouter = require('./site.route')
 var authRouter = require('./auth.route')
 var cartRouter = require('./cart.route')
 var productRouter = require('./product.route')
-var checkuser = require('../controllers/checkuser.middleware')
+var checkuser = require('../middlewares/checkuser.middleware')
 function route(app){
     app.use('/auth',authRouter)
     app.use('/cart',checkuser.checkUser,cartRouter)
