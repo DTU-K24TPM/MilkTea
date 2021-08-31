@@ -23,7 +23,8 @@ class SiteControler{
                 return result.Name.toLowerCase().indexOf(key.toLowerCase()) !== -1;
             })
             res.render('product/show',{
-                products : newResults             
+                products : newResults,
+                categories:categories         
             })
         })
     }
