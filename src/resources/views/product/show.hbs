@@ -8,19 +8,16 @@
         </div>
             <br />
             <ul class="list-menu-ul">
-                <li class="li-center"><a href="#" class="list-menu-a">ALL</a></li>
-                <li><a href="#" class="list-menu-a">TRÀ SỮA</a></li>
-                <li><a href="#" class="list-menu-a">TRÀ TRÁI CÂY</a></li>
-                <li class="li-center"><a href="#" class="list-menu-a">SỮA TƯƠI</a></li>
-                <li class="li-center"><a href="#" class="list-menu-a">CÀ PHÊ</a></li>
-                <li class="li-center"><a href="#" class="list-menu-a">ĐÁ XAY</a></li>
-                <li class="li-center"><a href="#" class="list-menu-a">ĂN VẶT</a></li>
+                <li class="li-center"><a href="/product" class="list-menu-a">ALL</a></li>
+                {{#each categories}}
+                <li class="li-center"><a href="/product/category/{{this.Id}}" class="list-menu-a">{{this.NameVN}}</a></li>
+                {{/each}}
             </ul>
             
             <div class="list-item">
                 {{#each products}}
                 <div class="list-item-div">
-                    <a href="product/{{this.Id}}"><img src="../img/{{this.Image}}" class="img-item">
+                    <a href="product/{{this.Id}}"><img src="../../img/{{this.Image}}" class="img-item">
                         <h5>{{this.Name}} </h5>
                         <h6>{{this.UnitPrice}}đ</h6>
                     </a>

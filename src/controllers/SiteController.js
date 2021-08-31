@@ -1,8 +1,17 @@
 var con = require('../db/index')
+var categories;
+var sql2 = `SELECT * FROM categories where Id not in (select Id from categories where Id = 6 or Id = 7)`;
+con.query(sql2, (err,results) => {
+    if(err) throw err;
+    categories = results           
+    })  
+
 class SiteControler{
     //[GET] /
     home(req,res){
-            res.render('home')
+            res.render('home',{
+                categories: categories 
+            })
        }
 
        search(req,res){
