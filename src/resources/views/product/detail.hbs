@@ -15,16 +15,21 @@
                         </th>
                     </tr>
 
-                    <tr>
-                        {{#each size}}
+                    <tr>                        
                         <td>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                                     value="option1" checked>
-                                <label class="form-check-label" for="inlineRadio1">{{this.Name}}({{this.UnitPrice}}đ)</label>
+                                <label class="form-check-label" for="inlineRadio1">{{sizeM.Name}}({{sizeM.UnitPrice}}đ)</label>
                             </div>
                         </td>                     
-                        {{/each}}
+                        <td>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">{{sizeL.Name}}({{sizeL.UnitPrice}}đ)</label>
+                            </div>
+                        </td> 
                     </tr>
 
                     <tr>
