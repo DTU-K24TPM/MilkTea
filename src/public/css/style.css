@@ -171,7 +171,11 @@ a:hover {
 
 .mySlides {
   display: none;
-  width: 90%; }
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 60%;
+  margin-right: 50px; }
 
 .img-face {
   width: 100%; }
