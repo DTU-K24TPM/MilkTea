@@ -1,5 +1,9 @@
+
 body {
-  font-size: 18px; }
+  font-size: 18px; 
+  max-width: 100%;
+    
+}
 
 a {
   text-decoration: none;
@@ -23,11 +27,18 @@ a:hover {
 .nav1 {
   font-size: 16px;
   padding: 0px; }
-
+.menu-div{
+  display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
 #menu ul {
   background: #fff;
   list-style-type: none;
-  text-align: center; }
+  text-align: center; 
+  margin-left: 40px;
+}
 
 .li1 {
   margin-left: 30px !important; }
@@ -62,17 +73,17 @@ a:hover {
 
 .input-search {
   display: inline-flex;
-  width: 30%;
+  width: 70%;
   margin-left: 10px; }
 
 .btn-search {
   background: indianred;
-  margin-top: -6px;
   border-color: #333;
   color: #fff;
   font-weight: 500;
   font-size: 16px;
-  border-radius: 0px; }
+  border-radius: 0px; 
+  max-height: 40px;}
 
 .btn-search:hover {
   background: indianred; }
@@ -154,9 +165,8 @@ a:hover {
   filter: invert(1); }
 
 .slide-show {
-  max-width: 50%;
+  max-width: 60%;
   float: right;
-  margin-right: 120px;
   margin-top: 20px; }
 
 .mySlides {
@@ -180,8 +190,10 @@ h2 {
   padding: 1px;
   margin: 10px 50px; }
 .list-menu{
-  position: relative;
-    display: inline-block
+  position: sticky;
+    display: inline-block;
+    min-width: 1263px;
+    width: auto;
 }
 .list-menu-ul {
   text-align: center; }
@@ -491,4 +503,9 @@ h5 {
 .btn-hello{
   background: rgba(248 249 250);
   border: 1px solid rgba(248 249 250);
+}
+.search-form{
+  display: flex;
+  min-width: 520px;
+  justify-content: flex-end;
 }
