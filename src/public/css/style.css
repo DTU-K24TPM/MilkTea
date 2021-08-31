@@ -230,6 +230,10 @@ h2 {
     justify-content: center;
   }
 .img-item {
+  max-width: 300px;
+  width: auto;
+ }
+ .img-item1 {
   margin-right: 40px;
     max-width: 400px;
     width: auto;
@@ -239,6 +243,8 @@ h2 {
  }
 .list-item-div{
   width: 30%;
+  margin: auto;
+
 }
 .span-footer {
   background: #333;
