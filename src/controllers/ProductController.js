@@ -30,7 +30,8 @@ class ProductControler{
                     res.render('product/detail',{
                         product: results1[0],
                         topping: results2,
-                        size: results3.slice().reverse()
+                        sizeM: results3[0],
+                        sizeL: results3[1]
                     })
                 })
             })
