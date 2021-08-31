@@ -3,7 +3,6 @@ var router = express.Router()
 
 var ProductController = require('../controllers/ProductController')
 
-router.get('/search',ProductController.search)
 router.get('/:id',ProductController.detail)
 router.get('/',ProductController.show)
 
