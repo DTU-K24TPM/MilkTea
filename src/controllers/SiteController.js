@@ -9,7 +9,7 @@ con.query(sql2, (err,results) => {
 class SiteControler{
         //[GET] /
         home(req,res){
-            var sql = `SELECT * FROM products WHERE Id NOT IN (SELECT Id FROM products WHERE CategoryId = 6 OR CategoryId = 7) ORDER BY RAND() LIMIT 7`
+            var sql = `SELECT * FROM products WHERE Id NOT IN (SELECT Id FROM products WHERE CategoryId = 6 OR CategoryId = 7 OR CategoryId = 8) ORDER BY RAND() LIMIT 7`
             con.query(sql, (err,results) => {                
                 res.render('home',{                    
                     categories: categories,
