@@ -351,15 +351,24 @@ h2 {
 
 .total-frame {
   height: 150px;
-  width: 350px;
+  min-width: 400px;
   float: right;
   margin-right: 50px;
   background: rgba(205, 92, 92, 0.062);
   padding: 20px; }
 
 .wrapper1 {
-  height: 200px; }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center; }
 
+.flex-total{
+    display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+  }
 .text-total {
   padding: 10px 20px;
   font-weight: 700;
@@ -381,7 +390,7 @@ h5 {
 .btn-total {
   margin-top: 30px;
   margin-left: -17px;
-  width: 345px;
+   min-width: 423px;
   background: indianred;
   font-weight: 500;
   border: none;
@@ -508,4 +517,44 @@ h5 {
   display: flex;
   min-width: 520px;
   justify-content: flex-end;
+}
+.form-dh{
+  min-width: 600px;
+  margin-left: 80px;
+  padding: 30px;
+  min-height: 650px;
+
+}
+.dh-frame{
+  max-width: 700px;
+    margin-left: 80px;
+    padding: 10px;
+    margin-top: 70px;
+}
+.wrapper-dh{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.dh-h6{
+  margin-top: 10px;
+}
+.total1{
+  height: auto;
+  margin-top: 60px;
+}
+.div-total{
+  background: #333;
+    height: 1px;
+    min-width: 1130px;
+}
+.text-total1{
+  font-weight: 400;
+}
+.wrapper2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
 }
