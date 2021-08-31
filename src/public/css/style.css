@@ -217,11 +217,14 @@ h2 {
   }
 .img-item {
   height: 300px;
+  margin: 10px;
  }
  .img-item:hover{
-  border: 2px solid #dd2424;
+  border: 2px solid indianred;
  }
-
+.list-item-div{
+  width: 30%;
+}
 .span-footer {
   background: #333;
   padding: 1px;
