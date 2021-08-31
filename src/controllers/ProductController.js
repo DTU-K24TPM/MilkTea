@@ -12,11 +12,18 @@ class ProductControler{
     }
     detail(req,res){              
         var id = req.params.id
-        var sql = `SELECT * FROM products WHERE Id = '${id}'`
-        con.query(sql,(err,results) => {
-            if(err) throw err;
-            res.render('product/detail',{
-                product: results[0]
+        var sql1 = `SELECT * FROM products WHERE Id = '${id}'`
+        var sql2 = `SELECT * FROM products WHERE CategoryId = 6`
+        var sql3 = `SELECT * FROM products WHERE CategoryId = 7`
+        con.query(sql1,(err,results1) => {
+            con.query(sql2,(err,results2) => {
+                con.query(sql3,(err,results3) => {                          
+                    res.render('product/detail',{
+                        product: results1[0],
+                        topping: results2,
+                        size: results3.slice().reverse()
+                    })
+                })
             })
         })                
     }
