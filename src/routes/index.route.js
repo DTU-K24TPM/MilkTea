@@ -5,8 +5,8 @@ var productRouter = require('./product.route')
 var checkuser = require('../controllers/checkuser.middleware')
 function route(app){
     app.use('/auth',authRouter)
-    app.use('/cart',cartRouter)
-    app.use('/product',productRouter)
+    app.use('/cart',checkuser.checkUser,cartRouter)
+    app.use('/product',checkuser.checkUser,productRouter)
     app.use('/',checkuser.checkUser,siteRouter)
 }
 module.exports = route
