@@ -230,8 +230,9 @@ h2 {
     justify-content: center;
   }
 .img-item {
-  height: 300px;
-  margin: 10px;
+  margin-right: 40px;
+    max-width: 400px;
+    width: auto;
  }
  .img-item:hover{
   border: 2px solid indianred;
@@ -282,7 +283,9 @@ h2 {
   display: inline-flex;
   white-space: nowrap;
   vertical-align: top;
-  width: 30%; }
+  width: 30%; 
+  margin-right: -100px;
+}
 
 .is-form {
   overflow: hidden;
@@ -559,4 +562,45 @@ h5 {
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 70px;
+}
+.item-table{
+  margin-top: 0px;
+}
+.form-check-input:checked{
+  background: indianred;
+  border-color: indianred;}
+.title-h5{
+  color: indianred;
+  font-weight: 700;
+}
+.title-h3{
+  font-weight: 700;
+}
+.item-table{
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-right: 200px;
+}
+.input-qty{
+  width: 30%;
+}
+.btn-detail{
+  min-width: 200px;
+  background: indianred;
+  font-weight: 500;
+}
+.btn-detail:hover{
+  background: indianred;
+}
+.btn-detail:focus{
+  background: indianred;
 }
