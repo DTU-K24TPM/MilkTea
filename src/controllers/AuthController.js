@@ -126,6 +126,7 @@ class AuthControler{
             }
         })        
     }
+    
     logout(req,res){
         res.clearCookie('Id')
         res.redirect('/')

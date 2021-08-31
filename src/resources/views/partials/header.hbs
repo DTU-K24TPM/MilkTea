@@ -38,8 +38,11 @@
                 <li class="li1"><a class="menu-a" href="/">TRANG CHỦ</a></li>
                 <li><a class="menu-a" href="menu.html">MENU</a></li>
                 <li><a class="menu-a" href="/cart/cartView">GIỎ HÀNG</a></li>
-                <input class="form-control me-2 input-search" type="search" placeholder="Tìm kiếm" aria-label="Search">
-                <button class="btn btn-outline-success btn-search" type="submit">Tìm kiếm</button>
+                <form action="/search" method="GET">
+                    <input name="product" class="form-control me-2 input-search" type="text" placeholder="Tìm kiếm" aria-label="Search">
+                    <button class="btn btn-outline-success btn-search" type="submit">Tìm kiếm</button>
+                </form>
+                
             </ul>
         </div>
     </div>
