@@ -224,10 +224,10 @@ h2 {
 
 .list-item {
     display: flex;
+    justify-content: flex-start;
     text-align: center;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    
   }
 .img-item {
   max-width: 300px;
@@ -609,4 +609,18 @@ h5 {
 }
 .btn-detail:focus{
   background: indianred;
+}
+.topping-form{
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.table-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 500px;
+  width: auto;
 }
