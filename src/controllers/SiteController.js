@@ -10,8 +10,7 @@ class SiteControler{
         //[GET] /
         home(req,res){
             var sql = `SELECT * FROM products LIMIT 7`
-            con.query(sql, (err,results) => {
-                console.log(results)
+            con.query(sql, (err,results) => {                
                 res.render('home',{                    
                     categories: categories,
                     products: results
