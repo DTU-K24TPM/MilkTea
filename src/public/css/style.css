@@ -619,9 +619,10 @@ h5 {
 .topping-form{
   display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     min-width: 500px;
+    max-height: 250px;
+    align-content: space-between;
 }
 .img-item1{
   max-width: 500px;
@@ -636,4 +637,14 @@ h5 {
 .item-title{
   text-align: start;
   margin-left: 30px;
+}
+.size-form{
+  display: flex;
+    justify-content: space-between;
+    margin-right: 76px;
+}
+.da-form{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 124px;
 }
