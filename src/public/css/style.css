@@ -580,10 +580,7 @@ h5 {
   align-items: stretch;
   margin-top: 70px;
 }
-.item-table{
-  margin-top: 0px;
 
-}
 .form-check-input:checked{
   background: indianred;
   border-color: indianred;}
@@ -624,7 +621,7 @@ h5 {
     align-content: space-between;
 }
 .img-item1{
-  max-width: 500px;
+  max-width: 550px;
     width: auto;
 }
 .table-item{
@@ -646,4 +643,19 @@ h5 {
   display: flex;
   justify-content: space-between;
   margin-right: 124px;
+}
+.btn-plus1{
+  opacity: 1;
+  display: inline-flex;
+  white-space: nowrap;
+  vertical-align: top;
+  max-width: 100%;
+  width: 200px;
+  margin-top: 7px;
+}
+.item-table1{
+  margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
