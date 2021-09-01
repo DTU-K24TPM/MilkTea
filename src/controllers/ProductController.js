@@ -25,6 +25,7 @@ class ProductControler{
         var sql2 = `SELECT * FROM products WHERE CategoryId = 6`
         var sql3 = `SELECT * FROM products WHERE CategoryId = 7`
         con.query(sql1,(err,results1) => {
+            if(results1[0].CategoryId !== 8){
             con.query(sql2,(err,results2) => {
                 con.query(sql3,(err,results3) => {                          
                     res.render('product/detail',{
@@ -35,6 +36,17 @@ class ProductControler{
                     })
                 })
             })
+        }
+        else {
+            con.query(sql3,(err,results3) => { 
+            res.render('product/detail',{
+                
+                product: results1[0],
+                sizeM: results3[0],
+                sizeL: results3[1]
+                    })
+                })
+            }
         })                
     }
     category(req,res){

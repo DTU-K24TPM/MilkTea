@@ -32,13 +32,15 @@
                         </td> 
                     </tr>
 
+                    {{#if topping}}
+
                     <tr>
                         <th>
                             <span class="item-size">Đá</span>
                             <span class="item-size-blur">(Bắt buộc)</span>
                         </th>
                     </tr>
-
+                    
                     <tr class="da-form">
                         <td>
                             <div class="form-check form-check-inline">
@@ -56,11 +58,13 @@
                         </td>
                         
                     </tr>
+                    
                     <tr>
                         <th>
                             <span class="item-size">Topping</span>
                         </th>
                     </tr>
+                 
                     <tr class="topping-form">
                         {{#each topping}}
                             <td>
@@ -71,6 +75,8 @@
                             </td>    
                         {{/each}}                    
                     </tr>
+
+                    {{/if}}
                 </thead>
             </table>
         </div>
