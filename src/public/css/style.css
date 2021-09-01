@@ -8,6 +8,11 @@ body {
   margin-left: 0;
     
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 a {
   text-decoration: none;
@@ -659,3 +664,130 @@ h5 {
     justify-content: space-evenly;
     flex-direction: row;
 }
+.dropdown-user{
+  position: relative;
+  display: inline-block;
+  margin-left: -4px;
+}
+.container.user{
+  margin-top: 50px;
+  background-color: #ebebeb;
+}
+.order-user{
+  padding-left: 20px;
+  font-weight: 500;
+  border-bottom: 1px solid rgb(202, 202, 202);
+}
+.order-list{
+  margin-top: 20px;
+}
+.menu-list-entry{
+  font-size: 16px;
+  font-weight: 500;
+}
+.menu-list-body{
+  margin: 5px 30px;
+  font-size: 14px;
+}
+.menu-list-detail{
+  margin: 10px 0;
+}
+.icon-account{
+  width: 23px;
+  border-radius: 50%;
+  padding-bottom: 4px;
+}
+.user-avatar{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.user-name{
+  padding-left: 5px;
+  color: indianred;
+}
+.status-bar{
+  box-sizing: border-box;
+  min-width: 0;
+  position: relative;
+  margin-top: 5px;
+}
+
+.stt-list{
+
+    padding: 8px 0;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    flex: 1 1 0%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease 0s;
+}
+.stt-list:hover{
+  border-bottom: 2px solid indianred;
+}
+.nav-tabs {
+  border-bottom:none;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: indianred;
+  background-color: #fff;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border: none;
+}
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  background: 0 0;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.img-order-list{
+  width: 60px;
+  height:50px;
+}
+.name-order-list{
+  font-size: 16px;
+}
+.total-order-list{
+  font-size: 10px;
+}
+.price-order-list{
+  font-size: 16px;
+  text-align: center;
+  padding: 15px;
+}
+.detail-order-list{
+  align-items: center;
+  border-bottom: 1px solid #cfcdcd;
+}
+.wrap-list{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+.col-3{
+  padding-left: 40px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.link1{
+  color: #333;
+}
+.link1:hover{
+  color: #333;
+}
+.container-dh{
+  padding: 10px;
+} 
