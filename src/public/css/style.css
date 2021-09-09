@@ -1038,7 +1038,6 @@ input:checked + .slider:before {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
-  justify-content: flex-start;
   align-items: flex-start;
 }
 .title-cart{
@@ -1049,4 +1048,12 @@ input:checked + .slider:before {
 .topping-cart{
   font-size: 16px;
     color: rgba(0,0,0,.5)
+}
+.row11{
+  width: 350px;
+  text-align: left !important;
+}
+.btn-add{
+  width: 90% !important;
+  margin-left: -50px !important;
 }

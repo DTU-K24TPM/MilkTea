@@ -18,7 +18,7 @@
                     <th scope="row" class="rowth">
                         <img src="../img/{{this.[0].Image}}" class="img-th"></a>
                     </th>
-                    <td class="row1">
+                    <td class="row1 row11">
                         <div class="flex-cart">
                             <div class="title-cart">{{this.[0].Name}}</div>
                             <div class="topping-cart">
@@ -39,7 +39,7 @@
                         </div>
                         </td>
                     <td class="row1">
-                        <div class="buttons_added">
+                        <div class="buttons_added btn-add">
                             <input class="minus is-form" type="button" value="-">
                             <input aria-label="quantity" class="input-qty" max="20" min="1" name="" type="number"
                                 value={{lookup ../quantity @index}}>
@@ -61,7 +61,7 @@
     <div class="flex-total">
         <div>
             
-            <a href="index.html"><button type="button" class="btn btn-secondary btn-cont">
+            <a href="/product"><button type="button" class="btn btn-secondary btn-cont">
                 Tiếp tục mua hàng
             </button></a>
             
@@ -87,3 +87,6 @@
 
 
 </body>
+
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/giohang.js"></script>
