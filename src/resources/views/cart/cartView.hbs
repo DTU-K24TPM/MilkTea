@@ -11,83 +11,50 @@
                     <th scope="col" class="col-th"></th>
                 </tr>
             </thead>
+            {{#if products}}
             <tbody>
+                {{#each products}}
                 <tr class="tr-item">
                     <th scope="row" class="rowth">
-                        <a href="chitiet.html"><img src="../img/img5.jpg" class="img-th"></a>
+                        <img src="../img/{{this.[0].Image}}" class="img-th"></a>
                     </th>
                     <td class="row1">
                         <div class="flex-cart">
-                            <div class="title-cart">Trà sữa đặc biệt</div>
-                            <div class="topping-cart">Size M, Đá chung</div>
-                            <div class="topping-cart">Nha đam, plan, thạch nhà làm</div>
+                            <div class="title-cart">{{this.[0].Name}}</div>
+                            <div class="topping-cart">
+                                {{#each this}}
+                                    {{#ifEquals this.CategoryId '8'}}
+                                        {{this.Name}}
+                                    {{/ifEquals}}
+                                {{/each}}                                
+                            </div>
+                            <div class="topping-cart">
+                                {{#each this}}
+                                    {{#ifEquals this.CategoryId '7'}}
+                                        {{this.Name}}
+                                    {{/ifEquals}}
+                                {{/each}}                                   
+                                {{lookup ../ice @index}}
+                            </div>
                         </div>
                         </td>
                     <td class="row1">
                         <div class="buttons_added">
                             <input class="minus is-form" type="button" value="-">
                             <input aria-label="quantity" class="input-qty" max="20" min="1" name="" type="number"
-                                value="1">
+                                value={{lookup ../quantity @index}}>
                             <input class="plus is-form" type="button" value="+">
                         </div>
                     </td>
-                    <td class="row1">22.000đ</td>
-                    <td class="row1">44.000</td>
+                    <td class="row1">{{lookup ../money @index}}</td>
+                    <td class="row1">Chưa làm</td>
                     <td class="row1">
                         <button type="button" class="btn-close btn-xoa" aria-label="Close"></button>
                     </td>
-                </tr>
-                <tr class="tr-item">
-                    <th scope="row" class="rowth">
-                        <img src="../img/img6.jpg" class="img-th">
-                    </th>
-                    <td class="row1">
-                        <div class="flex-cart">
-                            <div class="title-cart">Trà sữa đặc biệt</div>
-                            <div class="topping-cart">Size M, Đá chung</div>
-                            <div class="topping-cart">Nha đam, plan, thạch nhà làm</div>
-                        </div>
-                    </td>
-                    <td class="row1">
-                        <div class="buttons_added">
-                            <input class="minus is-form" type="button" value="-">
-                            <input aria-label="quantity" class="input-qty" max="20" min="1" name="" type="number"
-                                value="1">
-                            <input class="plus is-form" type="button" value="+">
-                        </div>
-                    </td>
-                    <td class="row1">22.000đ</td>
-                    <td class="row1">44.000</td>
-                    <td class="row1">
-                        <button type="button" class="btn-close btn-xoa" aria-label="Close"></button>
-                    </td>
-                </tr>
-                <tr class="tr-item">
-                    <th scope="row" class="rowth">
-                        <img src="../img/img7.jpg" class="img-th">
-                    </th>
-                    <td class="row1">
-                        <div class="flex-cart">
-                            <div class="title-cart">Trà sữa đặc biệt</div>
-                            <div class="topping-cart">Size M, Đá chung</div>
-                            <div class="topping-cart">Nha đam, plan, thạch nhà làm</div>
-                        </div>
-                    </td>
-                    <td class="row1">
-                        <div class="buttons_added">
-                            <input class="minus is-form" type="button" value="-">
-                            <input aria-label="quantity" class="input-qty" max="20" min="1" name="" type="number"
-                                value="1">
-                            <input class="plus is-form" type="button" value="+">
-                        </div>
-                    </td>
-                    <td class="row1">29.000đ</td>
-                    <td class="row1">29.000</td>
-                    <td class="row1">
-                        <button type="button" class="btn-close btn-xoa" aria-label="Close"></button>
-                    </td>
-                </tr>
+                </tr>                
+                {{/each}}                               
             </tbody>
+        {{/if}}
 
         </table>
     </div>
@@ -105,7 +72,7 @@
             <div class="span-total"></div>
             <div class="total">
                 <div class="text-total">TỔNG TIỀN: </div>
-                <div class="text-total">100.000đ </div>
+                <div class="text-total">Chưa làm </div>
             </div>
             <button type="button" class="btn btn-secondary btn-total">
                 ĐẶT HÀNG

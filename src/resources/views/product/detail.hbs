@@ -1,115 +1,104 @@
 <body>
-    <div class="wrapper wr-item">
-        <div class="item">
-            <img class="img-item1" src="../img/{{product.Image}}">
-            <div class="item-title">
-                <h3 class="title-h3">{{product.Name}}</h3>
-                <div>
-                    <h5 class="title-h5">{{product.UnitPrice}}</h5>
-                </div>
-                <table class="table-item">
-                    <thead>
-                        <tr>
-                            <th>
-                                <span class="item-size">Size</span>
-                                <span class="item-size-blur">(Bắt buộc)</span>
-                            </th>
-                        </tr>
-
-                        <tr class="size-form">
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio1" value="option1" checked>
-                                    <label class="form-check-label"
-                                        for="inlineRadio1">{{sizeM.Name}}({{sizeM.UnitPrice}}đ)</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio1" value="option1">
-                                    <label class="form-check-label"
-                                        for="inlineRadio1">{{sizeL.Name}}({{sizeL.UnitPrice}}đ)</label>
-                                </div>
-                            </td>
-                        </tr>
-
-                        {{#if topping}}
-
-                        <tr>
-                            <th>
-                                <span class="item-size">Đá</span>
-                                <span class="item-size-blur">(Bắt buộc)</span>
-                            </th>
-                        </tr>
-
-                        <tr class="da-form">
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions1"
-                                        id="inlineRadio2" value="option2" checked>
-                                    <label class="form-check-label" for="inlineRadio2">Đá chung</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions1"
-                                        id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Đá riêng</label>
-                                </div>
-                            </td>
-
-                        </tr>
-
-                        <tr>
-                            <th>
-                                <span class="item-size">Topping</span>
-                            </th>
-                        </tr>
-
-                        <tr class="topping-form">
-                            {{#each topping}}
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                        value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">{{this.Name}}:
-                                        {{this.UnitPrice}}đ</label>
-                                </div>
-                            </td>
-                            {{/each}}
-                        </tr>
-
-                        {{/if}}
-                        <tr class="item-table1">
-                            <td>
-                                <div class="buttons_added btn-plus btn-plus1">
-                                    <input class="minus is-form" type="button" value="-">
-                                    <input aria-label="quantity" class="input-qty" max="10" min="1" name=""
-                                        type="number" value="1">
-                                    <input class="plus is-form" type="button" value="+">
-                                </div>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-secondary btn-detail">
-                                    ĐẶT HÀNG
-                                </button>
-
-                            </td>
-
-                        </tr>
-                    </thead>
-                </table>
+<div class="wrapper wr-item">
+    <div class="item">
+        <img class="img-item1" src="../img/{{product.Image}}">
+        <div class="item-title">
+            <h3 class="title-h3">{{product.Name}}</h3>
+            <div>
+                <h5 class="title-h5">{{product.UnitPrice}}</h5>
             </div>
-        </div>
-        <div class="item-table">
+            <form class="form-login" method="POST" action="/product">
+            <input name="productId" type="hidden" value={{product.Id}}>
+            <table class="table-item">
+                <thead>
+                    <tr>
+                        <th>
+                            <span class="item-size">Size</span>
+                            <span class="item-size-blur">(Bắt buộc)</span>
+                        </th>
+                    </tr>
 
+                    <tr class="size-form">                        
+                        <td>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="inlineRadio1"
+                                    value={{sizeM.Id}} checked>
+                                <label class="form-check-label" 
+                                    for="inlineRadio1">{{sizeM.Name}}({{sizeM.UnitPrice}}đ)</label>
+                            </div>
+                        </td>                     
+                        <td>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="size" id="inlineRadio1"
+                                    value={{sizeL.Id}}>
+                                <label class="form-check-label" 
+                                    for="inlineRadio1">{{sizeL.Name}}({{sizeL.UnitPrice}}đ)</label>
+                            </div>
+                        </td> 
+                    </tr>
 
+                    {{#if topping}}
 
+                    <tr>
+                        <th>
+                            <span class="item-size">Đá</span>
+                            <span class="item-size-blur">(Bắt buộc)</span>
+                        </th>
+                    </tr>
+                    
+                    <tr class="da-form">
+                        <td>
+                            <div class="form-check form-check-inline">
+                                <input name="ice" class="form-check-input" type="radio" name="inlineRadioOptions1"
+                                    id="inlineRadio2" value="0" checked>
+                                <label class="form-check-label" for="inlineRadio2">Đá chung</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-inline">
+                                <input name="ice" class="form-check-input" type="radio" name="inlineRadioOptions1"
+                                    id="inlineRadio1" value="1" >
+                                <label class="form-check-label" for="inlineRadio1">Đá riêng</label>
+                            </div>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <th>
+                            <span class="item-size">Topping</span>
+                        </th>
+                    </tr>    
 
+                    <tr class="topping-form">
+                        {{#each topping}}
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input name="topping" class="form-check-input" type="checkbox" id="inlineCheckbox1" value={{this.Id}}>
+                                    <label class="form-check-label" for="inlineCheckbox1">{{this.Name}}: {{this.UnitPrice}}đ</label>
+                                </div>
+                            </td>       
+                        {{/each}}  
+                    </tr>
+                    
+                    {{/if}}
+                </thead>
+            </table>
         </div>
     </div>
+    <div class="item-table">
+
+        <div class="buttons_added btn-plus">
+            <input class="minus is-form" type="button" value="-">
+            <input name="quantity" aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
+            <input class="plus is-form" type="button" value="+">
+        </div>
+        <button type="submit" class="btn btn-secondary btn-detail">
+            ĐẶT HÀNG
+        </button>
+    </form>
+    </div>
+</div>
 </body>
 <script src="../js/jquery-3.6.0.min.js"></script>
 <script src="../js/giohang.js"></script>

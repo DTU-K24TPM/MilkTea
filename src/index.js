@@ -15,18 +15,17 @@ app.engine('hbs',handlebars({
   extname: '.hbs'
 }))
 
-
 app.set('view engine','hbs')
 app.set('views', path.join(__dirname,'resources','views'))
+var hbs = handlebars.create({})
+
+//Custom hàm ifEquals cho HBS
+hbs.handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+  return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
 
 //Route init
 route(app)
-
-
-
-
-
- 
 
 app.listen(port,function(){
     console.log(`Node server running @ http://localhost:${port}`)
