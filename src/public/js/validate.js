@@ -59,12 +59,20 @@ function validate()
     }
 
 
-    // 3. Phone
-    // var phone = document.getElementById("name").value;
-    // if (phone != '' &&  !/^[0-9]{10}$/.test(phone)){
-    //     showError('phone', 'Vui lòng kiểm tra lại Phone');
-    //     flag = false;
-    // }
+    var phone = document.getElementById('phone').value;
+    var phoneformat = /^(84|0[3|5|7|8|9])+[0-9]{8}$/;
+    if (phone == ''){
+        showError('phone', 'Vui lòng không để trống số điện thoại');
+        flag = false;
+    }
+    else if ( !phoneformat.test(phone)){
+        showError('phone', 'Vui lòng nhập đúng số điện thoại');
+        flag = false;
+    }
+    else{
+        showError('phone','');
+        flag = true;
+    }
 
 
     var email = document.getElementById('email').value;

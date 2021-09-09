@@ -24,28 +24,31 @@
                 {{/if}}
                 <input name="email" id="email" class="form-control input-login" type="email" required-type="email"
                     placeholder="Email" aria-label="default input example">
-                     <span class="span-error" id="email_error"></span>
+                <span class="span-error" id="email_error"></span>
                 <input name="fullname" id="name" class="form-control input-login" type="text" placeholder="Họ tên"
                     aria-label="default input example">
-                     <span class="span-error" id="name_error"></span>
+                <span class="span-error" id="name_error"></span>
+                <input name="phone" id="phone" class="form-control input-login" type="tel" placeholder="Số điện thoại"
+                    aria-label="default input example">
+                <span class="span-error" id="phone_error"></span>
                 <input name="birthday" id="birth" class="form-control input-login" type="date" placeholder="Ngày sinh"
                     aria-label="default input example">
-                     <span class="span-error" id="birth_error"></span>
+                <span class="span-error" id="birth_error"></span>
                 <select name="gender" class="form-select input-login" id="validationCustom04" required>
                     <option value="0">Nam</option>
                     <option value="1">Nữ</option>
                 </select>
                 <div class="col-sm-10">
-                    <input name="password" id="pass" type="password" class="form-control input-login" placeholder="Mật khẩu"
-                        id="inputPassword">
-                          <span class="span-error" id="pass_error"></span>
+                    <input name="password" id="pass" type="password" class="form-control input-login"
+                        placeholder="Mật khẩu" id="inputPassword">
+                    <span class="span-error" id="pass_error"></span>
                 </div>
                 <div class="col-sm-10 ">
                     <input type="password" id="repass" class="form-control input-login" placeholder="Nhập lại mật khẩu"
                         id="inputPassword">
-                         <span class="span-error" id="repass_error"></span>
+                    <span class="span-error" id="repass_error"></span>
                 </div>
-                <button type="submit"  onclick="return validate();" id="btn" class="btn btn-secondary btn-login">
+                <button type="submit" onclick="return validate();" id="btn" class="btn btn-secondary btn-login">
                     ĐĂNG KÝ
                 </button>
         </form>

@@ -105,6 +105,7 @@ class AuthControler{
         var fullname= req.body.fullname
         var gender = parseInt(req.body.gender)
         var birthday = req.body.birthday
+        var phone = req.body.phone
         var sql = `SELECT * FROM customers WHERE Email= '${email}'`
         con.query(sql, (err,results) => {          
             if(err) throw err;
@@ -115,7 +116,7 @@ class AuthControler{
                     values: req.body
                 });
             }else{
-                var sql = `INSERT INTO customers (Password,Fullname,Email,Gender,Birthday) VALUES ('${password}','${fullname}','${email}',${gender},'${birthday}')`
+                var sql = `INSERT INTO customers (Password,Fullname,Email,Gender,Birthday,Phone) VALUES ('${password}','${fullname}','${email}',${gender},'${birthday}','${phone}')`
                 con.query(sql, (err,results) => {
                     if(err) console.log(err)                    
                     res.render('auth/register',{
