@@ -46,8 +46,8 @@
                             <input class="plus is-form" type="button" value="+">
                         </div>
                     </td>
-                    <td class="row1">{{lookup ../money @index}}</td>
-                    <td class="row1">Chưa làm</td>
+                    <td class="row1 amount">{{lookup ../money @index}}</td>
+                    <td class="row1 total">Chưa làm</td>
                     <td class="row1">
                         <button type="button" class="btn-close btn-xoa" aria-label="Close"></button>
                     </td>
@@ -70,9 +70,9 @@
         <div class="total-frame">
             <h5> Giỏ hàng</h5>
             <div class="span-total"></div>
-            <div class="total">
+            <div class="total-form">
                 <div class="text-total">TỔNG TIỀN: </div>
-                <div class="text-total">Chưa làm </div>
+                <div class="js-cart-total-amount">Chưa làm </div>
             </div>
             <button type="button" class="btn btn-secondary btn-total">
                 ĐẶT HÀNG

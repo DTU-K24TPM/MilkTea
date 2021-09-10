@@ -403,7 +403,7 @@ h2 {
 
 .total {
   display: flex;
-  justify-content: space-between; }
+  justify-content: center; }
 
 h5 {
   padding: 10px;
@@ -1358,3 +1358,12 @@ background: #f5efef;
   color: indianred;
   text-align: end;
 } 
+.total-form{
+  display: flex;
+    justify-content: space-between;
+}
+.js-cart-total-amount{
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 16px; 
+}
