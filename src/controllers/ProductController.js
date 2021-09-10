@@ -79,10 +79,24 @@ class ProductControler{
         var id= req.cookies.Id
         con.query(`SELECT Cart FROM customers WHERE Id= '${id}'`, (err,results1) => {
             var newcart=results1[0]['Cart']
-            if(newcart){
-                newcart+=','+cart                
-            }
-            else newcart+=cart
+            if(newcart){                
+                if(newcart.length>1){
+                    var temp = newcart.split(',')
+                }                
+                var dk = false
+                for(let i=0;i<temp.length;i++){  
+                    var temp1=temp[i].slice(4)
+                    var temp2=cart.slice(4)                
+                    if(cart[0]==temp[i][0]  && temp1==temp2){
+                        temp[i]=temp[i].split(' ')                        
+                        temp[i][1]=parseInt(temp[i][1])+1                        
+                        temp[i]=temp[i].join(' ')                        
+                        newcart=temp.join(',')
+                        dk=true                        
+                    }
+                }
+                if(dk==false) newcart+=','+cart          
+            } else newcart=cart
             var sql = `UPDATE customers SET Cart = '${newcart}' WHERE Id='${id}'`
             con.query(sql, (err,results) => {   
                 if(err) console.log(err)             
